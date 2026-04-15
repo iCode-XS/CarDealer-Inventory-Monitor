@@ -3,8 +3,9 @@
 import requests
 import time
 from bs4 import BeautifulSoup
-import os 
+import os
 import json
+import pandas as pd
 
 # This script uses my user-agent header as the ID
 
@@ -91,20 +92,20 @@ for x in info_container:    # Finding the details about the car and saving it as
 
     li_tags = add_info.find_all('li')
     info_1 = li_tags[0].text    # The type of the car
-    current_car['Type'] = info_1.strip()
+    current_car['Type'] = info_1.strip().strip('•')
 
     info_2 = li_tags[1].text    # The gearbox of the car
-    current_car['Gearbox'] = info_2.strip()
+    current_car['Gearbox'] = info_2.strip().strip('•')
 
     add_info_2 = add_info.find_next_sibling()
 
     li_tags_2 = add_info_2.find_all('li')
 
     info_3 = li_tags_2[0].text      # How many kms the car is currently driven
-    current_car['Driven'] = info_3.strip()
+    current_car['Driven'] = info_3.strip().strip('•')
 
     info_4 = li_tags_2[1].text      # What kind of fuel does the car use
-    current_car['Fuel Type'] = info_4.strip()
+    current_car['Fuel Type'] = info_4.strip().strip('•')
 
     price = x.find('span', class_='vy-price').text
     current_car['Price'] = price.strip()    # The price of the car
@@ -115,7 +116,12 @@ for x in info_container:    # Finding the details about the car and saving it as
 print('Inventory Details:\n')
 for x in cars_list:     # Printing the data into the console
     for category, details in x.items():
-        clean_category = category.strip('•')
-        clean_details = details.strip('•')
-        print(f'{clean_category}: {clean_details}')
+        print(f'{category}: {details}')
     print('\n')
+
+table = pd.DataFrame(cars_list)     # Putting cars_list into a new Data Structure which can used for creating files like .csv .xlsx
+table.to_excel('Inventory_listings.xlsx', index=False)  # Creating an Excel file
+table.to_csv('Inventory_listings.csv', index=False) # Creating a .csv file
+
+print('Data has been saved to an Excel file!')
+print('Data has been saved to a .csv file!')
