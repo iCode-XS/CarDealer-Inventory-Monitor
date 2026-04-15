@@ -9,18 +9,10 @@ import json
 # This script uses my user-agent header as the ID
 
 user_agent = {
-                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/123.0.6312.86 Chrome/123.0.6312.86 Safari/537.36",
-              "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", 
-              "Accept-Language": "en-AU,en;q=0.9,en-GB;q=0.8",
-              "Accept-Encoding": "gzip, deflate, br",
-              "DNT": "1",
-              "Connection": "keep-alive",
-              "Sec-Fetch-Dest": "document",
-              "Sec-Fetch-Mode": "navigate",
-              "Sec-Fetch-Site": "same-origin",
-              "Sec-Fetch-User": "?1",
-              "Upgrade-Insecure-Requests": "1"
-    }
+ 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0', 
+'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'DNT': '1', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Sec-Fetch-Dest': 'document', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-User': '?1', 'Priority': 'u=1' }
+
+
 
 # Capturing the website cookies from the website's server with session variable
 session = requests.session()
@@ -119,5 +111,11 @@ for x in info_container:    # Finding the details about the car and saving it as
 
     cars_list.append(current_car)   # Pushing the current_car dictionary to the cars_list variable
 
-for x in cars_list:
-    print(x)    # Printing the data into the console
+
+print('Inventory Details:\n')
+for x in cars_list:     # Printing the data into the console
+    for category, details in x.items():
+        clean_category = category.strip('•')
+        clean_details = details.strip('•')
+        print(f'{clean_category}: {clean_details}')
+    print('\n')
