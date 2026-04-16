@@ -64,9 +64,11 @@ The tools I use:
 
     > If I explain it simply, too many requests can slow the performance of the server running the website on the internet!
 
-    > This wait can also be used to simulate a click done by an actual human. So, in the eyes of the server, it will look like an actual human rather than a bot or a script. But, this was just one page crawl and scrape so for this one I definitely didn't need to this!
+    > This wait can also be used to simulate a click done by an actual human. So, in the eyes of the server, it will look like an actual human rather than a bot or a script. But, this was just one page crawl and scrape so for this one I definitely didn't need to do this!
 
-* pandas: The job of pandas library was simple! The selected and cleaned information gathered by the script which we need, we push it to an Excel file or a .csv file or even a .json file. We will have a clean file with all the information extracted and cleaned - ready for use! You can check the excel file right here: 
+* pandas: The job of pandas library was simple! The selected and cleaned information gathered by the script which we need, we push it to an Excel file or a .csv file or even a .json file. We will have a clean file with all the information extracted, cleaned, and stored - ready for use! 
+
+You can check the excel file right here: 
 
    [Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
 
@@ -86,7 +88,7 @@ The tools I use:
                 
       Bullets and unwanted spaces were present inside the dictionaries.
 
-    - After: The script is only showing the details like: Name, Type, Gearbox, Fuel Type, Driven, Price of the car.
+    - After: The script is only showing the details like: Name, Type, Gearbox, Fuel Type, Driven, Price of the car | Printing the nested dictionaries? Not anymore!
 
       The bullets and unwanted spaces got removed from the dictionary! Only the cleaned information about the car is showing up.
 
