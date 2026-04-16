@@ -1,6 +1,6 @@
 # Inventory Monitor
 
-This project is an automated script which pulls the website and extracts the data from a car dealer website.
+This project is an automated script which pulls the website from the internet and extracts the data from a car dealer website.
 
 ### Benefits
 
