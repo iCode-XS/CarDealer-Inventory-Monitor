@@ -66,11 +66,11 @@ This wait can also be used to simulate a click done by an actual human rather th
     
     - Before: It was printing the nested dictionaries stored inside the list. Entire console was getting filled with nested dictionaries.
                 
-              Bullets and unwanted spaces were present inside the dictionaries.
+      Bullets and unwanted spaces were present inside the dictionaries.
 
     - After: The script is only showing the details like: Name, Type, Gearbox, Fuel Type, Driven, Price of the car.
 
-             The bullets and unwanted spaces got removed from the dictionary! Only the cleaned information about the car is showing up.
+      The bullets and unwanted spaces got removed from the dictionary! Only the cleaned information about the car is showing up.
 
 * Version 3.1: Inventory Monitor (Major release)
 
