@@ -2,6 +2,14 @@
 
 This project is an automated script which pulls the website from the internet and extracts the data from a car dealer website.
 
+### Before using the script
+
+> My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
+
+> Also, please make sure to delete the cookie files if you want to re-run the script the next day - by doing this, your IP won't get flagged and your script won't be redirected to the captcha page!
+
+> If the script isn't pulling the data - that means that you probably got redirected to the captcha page even if the header response is 200 so do keep this in mind!
+
 ### Benefits
 
 What's the need of extracting information from a website? 
@@ -37,14 +45,6 @@ This script is following the website rules and regulations provided by the websi
    > Using requests.session() for creating a session like a browser
 
    > Storing and reusing cookies so that we can consistently make multiple requests | Normally the script was getting redirected to the captcha page
-
-### Before using the script
-
-- My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
-
-- Also, please make sure to delete the cookie files if you want to re-run the script the next day - by doing this, your IP won't get flagged and your script won't be redirected to the captcha page!
-
-- If the script isn't pulling the data - that means that you probably got redirected to the captcha page even if the header response is 200 so do keep this in mind!
 
 ### Tech Stack
 
