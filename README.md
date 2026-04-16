@@ -30,7 +30,7 @@ This script is following the website rules and regulations provided by the websi
 
 > **This repo isn't made with ill intentions! If anyone has any problem regarding this repo, please feel free to contact me.**
 
-# Tech Stack
+### Tech Stack
 
 The tools I use: 
 
@@ -38,9 +38,9 @@ The tools I use:
 
 * beautifulSoup4 - for creating a DOM(Document-Object Model) of the fetched website, so that I can use it with python for tasks like:
 
-> Data Extraction: Out of the entire site that we just pulled, we usually wanted selected information and not the entire page.
+    > Data Extraction: Out of the entire site that we just pulled, we usually wanted selected information and not the entire page.
 
-> Data Cleaning: The selected information might have have things like unwanted spacing, bullets etc. This website does have random bullets and spaces but I cleaned them and you can actually check the final output of the file!
+    > Data Cleaning: The selected information might have have things like unwanted spacing, bullets etc. This website does have random bullets and spaces but I cleaned them and you can actually check the final output of the file!
 
 * lxml: Normally, beautifulSoup uses html.parser which is written in python and is noticably slow in HTML to DOM conversion! lxml is written in C entirely so it solves the speed problem!
 
