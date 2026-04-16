@@ -30,6 +30,20 @@ This script is following the website rules and regulations provided by the websi
 
    > **This repo isn't made with ill intentions! If anyone has any problem regarding this repo, please feel free to contact me.**
 
+### Highlights
+
+   > Using User-agents so that script doesn't get suspected as a BOT or a script
+
+   > Using requests.session() for creating a session like a browser
+
+   > Storing and reusing cookies so that we can consistently make multiple requests | Normally the script was getting redirected to the captcha page
+
+My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
+
+Also, please make sure to delete the cookie files if you want to re-run the script the next day - by doing this, your IP won't get flagged and your script won't be redirected to the captcha page!
+
+If the script isn't pulling the data - that means that you probably got redirected to the captcha page even if the header response is 200 so do keep this in mind!
+
 ### Tech Stack
 
 The tools I use: 
@@ -52,7 +66,7 @@ The tools I use:
 
 * pandas: The job of pandas library was simple! The selected and cleaned information gathered by the script which we need, we push it to an Excel file or a .csv file or even a .json file. We will have a clean file with all the information extracted and cleaned - ready for use! You can check the excel file right here: 
 
-[Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
+                                                [Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
 
 ### Version Log:
 
