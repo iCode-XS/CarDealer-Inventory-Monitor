@@ -38,11 +38,11 @@ This script is following the website rules and regulations provided by the websi
 
    > Storing and reusing cookies so that we can consistently make multiple requests | Normally the script was getting redirected to the captcha page
 
-My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
+- My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
 
-Also, please make sure to delete the cookie files if you want to re-run the script the next day - by doing this, your IP won't get flagged and your script won't be redirected to the captcha page!
+- Also, please make sure to delete the cookie files if you want to re-run the script the next day - by doing this, your IP won't get flagged and your script won't be redirected to the captcha page!
 
-If the script isn't pulling the data - that means that you probably got redirected to the captcha page even if the header response is 200 so do keep this in mind!
+- If the script isn't pulling the data - that means that you probably got redirected to the captcha page even if the header response is 200 so do keep this in mind!
 
 ### Tech Stack
 
@@ -66,7 +66,7 @@ The tools I use:
 
 * pandas: The job of pandas library was simple! The selected and cleaned information gathered by the script which we need, we push it to an Excel file or a .csv file or even a .json file. We will have a clean file with all the information extracted and cleaned - ready for use! You can check the excel file right here: 
 
-                                                [Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
+   [Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
 
 ### Version Log:
 
