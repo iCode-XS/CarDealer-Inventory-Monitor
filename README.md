@@ -26,9 +26,9 @@ I am interested in the craft of web scraping and I am doing it simply for learni
 
 This script is following the website rules and regulations provided by the website owner at robots.txt file - specifically made for bots and this script is only accessing the public information available on this website!
 
-> **Guidelines were last checked on the date of April 4, 2026** 
+   > **Guidelines were last checked on the date of April 4, 2026** 
 
-> **This repo isn't made with ill intentions! If anyone has any problem regarding this repo, please feel free to contact me.**
+   > **This repo isn't made with ill intentions! If anyone has any problem regarding this repo, please feel free to contact me.**
 
 ### Tech Stack
 
@@ -46,11 +46,12 @@ The tools I use:
 
 * time library: I use time to initiate a wait counter so that the script stops for few minutes and waits for the execution. It waits until the timer is expired so that we don't accidently do a DDoS attack on a website. 
 
-If I explain it simply, too many requests can slow the performance of the server running the website on the internet!
+    > If I explain it simply, too many requests can slow the performance of the server running the website on the internet!
 
-This wait can also be used to simulate a click done by an actual human rather than a server. But, this was just one page crawl and scrape so for this one I definitely didn't need to this!
+    > This wait can also be used to simulate a click done by an actual human rather than a server. But, this was just one page crawl and scrape so for this one I definitely didn't need to this!
 
 * pandas: The job of pandas library was simple! The selected and cleaned information gathered by the script which we need, we push it to an Excel file or a .csv file or even a .json file. We will have a clean file with all the information extracted and cleaned - ready for use! You can check the excel file right here: 
+
 [Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
 
 ### Version Log:
