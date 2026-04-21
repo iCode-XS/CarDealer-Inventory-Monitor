@@ -14,6 +14,7 @@ Website link: [Click here](https://driveinstyle.com.au/stock-list)
 
 > WARNING:
 I advise you not to click at the link! If you click on this link even once and opened the target site with your browser, you won't be able to run the script!
+> Only open the target site if you don't care about running the script at all!
 
 ### Demo
 
