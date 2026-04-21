@@ -2,6 +2,12 @@
 
 This project is an automated script which pulls the website from the internet and extracts the data from a car dealer website.
 
+
+You can check the sample of an excel file created with the script, right here: 
+
+   [Preview of the Excel File](https://www.dropbox.com/scl/fi/fpurnb3y2ui7e2d8wzwg4/Inventory_listings.xlsx?rlkey=ggt7o7x1x6w4v9pb1ati6f1fn&st=uyey2t4d&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/fpurnb3y2ui7e2d8wzwg4/Inventory_listings.xlsx?rlkey=ognvfjhwfm15fklxucesebzgi&st=ddfz2q85&dl=1)
+
+
 ### Before using the script
 
 > My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
@@ -40,11 +46,13 @@ This script is following the website rules and regulations provided by the websi
 
 ### Highlights
 
-   > Using User-agents so that script doesn't get suspected as a BOT or a script
+   > Using User-agent header and other browser headers so that script doesn't get suspected as a BOT or a script
 
-   > Using requests.session() for creating a session like a browser
+   > Using requests.session() for creating a consistent connection session like a browser
 
-   > Storing and reusing cookies so that we can consistently make multiple requests | Normally the script was getting redirected to the captcha page
+   > Storing and reusing cookies so that we can consistently make multiple requests | Normally the script was getting redirected to the captcha page when we were making multiple site requests during a short period of time.
+
+   > Using Error handling so that if there are any problems that happen during the runtime of the script, we can catch the error, analyze the problem and fix it easily!
 
 ### Tech Stack
 
@@ -58,21 +66,17 @@ The tools I use:
 
     > Data Cleaning: The selected information might have have things like unwanted spacing, bullets etc. This website does have random bullets and spaces but I cleaned them and you can actually check the final output of the file!
 
-* lxml: Normally, beautifulSoup uses html.parser which is written in python and is noticably slow in HTML to DOM conversion! lxml is written in C entirely so it solves the speed problem!
+* lxml: Normally, beautifulSoup uses html.parser which is written in python and is noticably slow in HTML to DOM conversion! lxml is written in C entirely so it solves the slow speed problem!
 
-* time library: I use time to initiate a wait counter so that the script stops for few minutes and waits for the execution. It waits until the timer is expired so that we don't accidently do a DDoS attack on a website. 
+* time library: I use time to initiate a wait countdown so that the script stops for few seconds and waits for the execution. It waits until the timer is expired so that we don't accidently do a DDoS attack on a website. 
 
-    > If I explain it simply, too many requests can slow the performance of the server running the website on the internet!
+    > If I explain it simply, too many requests can slow the performance of the server running the website on the internet. By using countdown, we are drawing a line that is seperating us by not doing attack on the server! 
 
     > This wait can also be used to simulate a click done by an actual human. So, in the eyes of the server, it will look like an actual human rather than a bot or a script. But, this was just one page crawl and scrape so for this one I definitely didn't need to do this!
 
 * pandas: The job of pandas library was simple! The selected and cleaned information gathered by the script which we need, we push it to an Excel file or a .csv file or even a .json file. We will have a clean file with all the information extracted, cleaned, and stored - ready for use! 
 
-You can check the excel file right here: 
-
-   [Preview of the Excel File](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=0) | [Direct Download](https://www.dropbox.com/scl/fi/qpkoe0lfmlkan2u8r6hpk/Inventory_listings.xlsx?rlkey=98q2ib4n7biamaxavgpvkzefx&st=6bro8z2x&dl=1)
-
-### Version Log:
+### Version Log
 
 * Version 1.0: Inventory Monitor (Major release)
 
