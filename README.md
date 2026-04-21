@@ -10,6 +10,10 @@ This is the screenshot from the website and this is how individual car is listed
 <br>
 The script is currently trying to grab the individual details about every single car currently available at the dealership website.
 
+Website link: [Click here](https://driveinstyle.com.au/stock-list)
+
+diff''' - WARNING: I advise you not to click at the link! If you run this link even once at the browser, you won't be able to use the script!
+
 ### Demo
 
 https://github.com/user-attachments/assets/4baa2646-ed6e-4a91-8c5b-b9a72434f360
