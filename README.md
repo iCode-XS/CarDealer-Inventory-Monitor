@@ -13,6 +13,7 @@ The script is currently trying to grab the individual details about every single
 
 ### Demo
 <br>
+
 https://github.com/user-attachments/assets/4baa2646-ed6e-4a91-8c5b-b9a72434f360
 
 You can check the sample of an excel file created with the script, right here: 
