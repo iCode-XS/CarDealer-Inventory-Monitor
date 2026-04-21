@@ -2,6 +2,7 @@
 
 This project is an automated script which pulls the website from the internet and extracts the data from a car dealer website.
 
+https://github.com/user-attachments/assets/4baa2646-ed6e-4a91-8c5b-b9a72434f360
 
 You can check the sample of an excel file created with the script, right here: 
 
