@@ -21,7 +21,7 @@ You can check the sample of an excel file created with the script, right here:
 
 ### Before using the script
 
-> My advice still here is to use the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
+> My advice still here is to run the script once and wait for like 5 to 10 minutes if you want the updated data! The data is also getting saved to an excel file (and files) so I highly doubt that, someone will need to run the script multiple times!
 
 > Also, please make sure to delete the cookie files if you want to re-run the script the next day - by doing this, your IP won't get flagged and your script won't be redirected to the captcha page!
 
@@ -40,6 +40,7 @@ This data can be used for various purposes including:
 * The features of this script aren't just limited to just access the information available from the website! You can also use this script to create an excel file or a csv file or even a database in theory if we want to.
 
 * This datapipe can increase the speed tremendously if the dealership decides ever to create an app for the smartphone!
+
 
 ### My motives
 
