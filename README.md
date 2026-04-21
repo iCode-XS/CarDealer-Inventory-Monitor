@@ -4,13 +4,19 @@ This project is an automated script which pulls the website from the internet an
 
 ### Target Data
 
-This is the data that we can grab and the script is trying grab from the target website! (As you can see in the screenshot) 
+This is the screenshot from the website and this is how individual car is listed on the website that is currently available in the dealership inventory.
+
+The script is currently trying to grab the individual details about every single car currently available at the dealership website.
+
 
 <img width="251" height="349" alt="IMG_0695" src="https://github.com/user-attachments/assets/2987f1b9-2004-406d-8413-c9911771f6ed" />
 
+
 ### Demo
 
+
 https://github.com/user-attachments/assets/4baa2646-ed6e-4a91-8c5b-b9a72434f360
+
 
 You can check the sample of an excel file created with the script, right here: 
 
@@ -47,7 +53,9 @@ I am interested in the craft of web scraping and I am doing it simply for learni
 
 ### Safety Guidelines
 
+
 <img width="321" height="106" alt="Screenshot from 2026-04-21 19-46-45" src="https://github.com/user-attachments/assets/e5fb7ae5-7b08-446d-b240-fe9aac626d70" />
+
 
 This script is following the website rules and regulations provided by the website owner at robots.txt file - specifically made for bots and this script is only accessing the public information available on this website!
 
