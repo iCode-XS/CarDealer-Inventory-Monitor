@@ -12,7 +12,6 @@ The script is currently trying to grab the individual details about every single
 <img width="251" height="349" alt="IMG_0695" src="https://github.com/user-attachments/assets/2987f1b9-2004-406d-8413-c9911771f6ed" />
 
 ### Demo
-<br>
 
 https://github.com/user-attachments/assets/4baa2646-ed6e-4a91-8c5b-b9a72434f360
 
