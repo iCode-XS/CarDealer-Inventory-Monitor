@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+
+import requests
+import time
+from bs4 import BeautifulSoup
+import os
+import json
+import pandas as pd
+
+
+# Some functions for demonstration purposes for terminal
+def Initializing():
+    for x in ['.', '..', '...']:
+        print(f'\rInitializing{x}', end='', flush=True)
+        time.sleep(0.5)
+    print('\r' + ' ' * 30, end='', flush=True)
+
+    for x in ['.', '..', '...']:
+        print(f'\rInitializing{x}', end='', flush=True)
+        time.sleep(0.5)
+
+    print('\r' + ' ' * 30, end='', flush=True)
+    print('\n')
+
+
+def Countdown(num):
+    for x in range(num, 0, -1):
+        print(f'\rCountdown: {x}', end='', flush=True)
+        time.sleep(1)
+
+    print('\r' + ' ' * 100, end='', flush=True)
+    print('\n')
+
+def Please_wait():
+    for x in ['.', '..', '...']:
+        print(f'\rPlease wait{x}', end='', flush=True)
+        time.sleep(0.5)
+    print('\r' + ' ' * 30, end='', flush=True)
+
+    for x in ['.', '..', '...']:
+        print(f'\rPlease wait{x}', end='', flush=True)
+        time.sleep(0.5)
+
+    print('\r' + ' ' * 30, end='', flush=True)
+    print('\n')
+
+# This script uses my user-agent header as the ID
+
+user_agent = {
+ 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:149.0) Gecko/20100101 Firefox/149.0', 
+'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'DNT': '1', 'Connection': 'keep-alive', 'Upgrade-Insecure-Requests': '1', 'Sec-Fetch-Dest': 'document', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Site': 'none', 'Sec-Fetch-User': '?1', 'Priority': 'u=1' }
+
+
+
+# Capturing the website cookies from the website's server with session variable
+session = requests.session()
+session.headers.update(user_agent)
+
+url = 'https://driveinstyle.com.au/stock-list'
+
+# cookies is the data structure.. which will store the cookies so that we can perform operations like save, update to a file
+cookies = {}
+
+# os.path.exists is checking the file 'cookies.json' if it exists, it will load the cookies into the script for use
+# This file will only exists if we ever ran this script in the past at least once
+if os.path.exists('cookies.json'):
+    with open('cookies.json', 'r') as f:
+        reuse_cookies = json.load(f)
+        session.cookies.update(reuse_cookies)
+
+# Fetching the website from the internet with error handling
+
+try:
+    print('Inventory Monitor | Version 3.1')
+    Initializing()
+    print('The script is currently trying to grab page from the server!')
+    time.sleep(0.3)
+    Please_wait()
+    response = session.get(url, timeout=60) # Attempting a GET request to the server
+    response.raise_for_status()
+    print('Page has been successfully grabbed from the server! Response Code:', response.status_code, '| URL:', url)
+    print('\n')
+    print('Script is complying with the rules of the the Server! Initiating Countdown of 10 seconds...\n') # Complying with robots.txt file 
+    Countdown(9)
+
+    # The code below is the cookie system
+    print('Cookies assigned to us:\n')
+    
+    for x, y in session.cookies.items():
+        print(f'{x}: {y}')
+        time.sleep(2)
+        cookies[x] = y
+
+    print('\n')
+    
+    # Creating or overwriting the cookie file depending on if it exists or not in our main script folder
+    with open('cookies.json', 'w') as f:
+        json.dump(cookies, f, indent=4)
+
+
+except requests.exceptions.HTTPError as e:
+    print('A problem has occured while fetching the page!', e)
+
+# Transforming the data gathered from above into a Document Object Model(DOM) so that we can use it inside our python script!
+
+try:
+    soup = BeautifulSoup(response.text, 'lxml')
+    print('The fetched website (', url, ') has been successfully parsed!')
+    time.sleep(0.4)
+    #print(soup)
+except Exception as e:
+    print('There is a problem that has occured in parsing! Error cause:', e)
+
+print('\n')
+print('Inventory List:')
+print('\n')
+time.sleep(0.2)
+
+# Now we are gonna extract the information from the DOM that we made above
+# and save all cars information in cars_list variable
+
+cars_list = []
+
+# Info_container is responsible for finding all the information about cars in the inventory (at the dealership)
+info_container = soup.find_all('ul', class_='list-group list-space')
+print('Current Cars in Stock:', len(info_container))    # Checking the total number of cars in the inventory
+print('\n')
+
+for x in info_container:    # Finding the details about the car and saving it as a dictionary
+    current_car = {}    # This is that dictionary
+
+    name = x.find('h2', class_='vy-title-block').text   # This is the name of the car
+    current_car['Name'] = name.strip()
+
+    add_info = x.find('ul')
+
+    li_tags = add_info.find_all('li')
+    info_1 = li_tags[0].text    # The type of the car
+    current_car['Type'] = info_1.strip().strip('•')
+
+    info_2 = li_tags[1].text    # The gearbox of the car
+    current_car['Gearbox'] = info_2.strip().strip('•')
+
+    add_info_2 = add_info.find_next_sibling()
+
+    li_tags_2 = add_info_2.find_all('li')
+
+    info_3 = li_tags_2[0].text      # How many kms the car is currently driven
+    current_car['Driven'] = info_3.strip().strip('•')
+
+    info_4 = li_tags_2[1].text      # What kind of fuel does the car use
+    current_car['Fuel Type'] = info_4.strip().strip('•')
+
+    price = x.find('span', class_='vy-price').text
+    current_car['Price'] = price.strip()    # The price of the car
+
+    cars_list.append(current_car)   # Pushing the current_car dictionary to the cars_list variable
+
+
+print('Inventory Details:\n')
+Initializing()
+print('\n')
+
+for x in cars_list:     # Printing the data into the console
+    for category, details in x.items():
+        print(f'{category}: {details}')
+        time.sleep(0.01)
+    print('\n')
+
+Please_wait()
+
+table = pd.DataFrame(cars_list)     # Putting cars_list into a new Data Structure which can used for creating files like .csv .xlsx
+table.to_excel('Inventory_listings.xlsx', index=False)      # Creating an Excel file
+table.to_csv('Inventory_listings.csv', index=False)      # Creating a .csv file
+
+print('Data has been saved to an Excel file!')
+time.sleep(0.3)
+print('Data has been saved to a .csv file!')
