@@ -12,6 +12,7 @@ The script is currently trying to grab the individual details about every single
 <img width="251" height="349" alt="IMG_0695" src="https://github.com/user-attachments/assets/2987f1b9-2004-406d-8413-c9911771f6ed" />
 
 ### Demo
+<br>
 https://github.com/user-attachments/assets/4baa2646-ed6e-4a91-8c5b-b9a72434f360
 
 You can check the sample of an excel file created with the script, right here: 
@@ -48,7 +49,6 @@ So, why am I doing this?
 I am interested in the craft of web scraping and I am doing it simply for learning purposes. 
 
 ### Safety Guidelines
-<br>
 <img width="321" height="106" alt="Screenshot from 2026-04-21 19-46-45" src="https://github.com/user-attachments/assets/e5fb7ae5-7b08-446d-b240-fe9aac626d70" />
 <br>
 
