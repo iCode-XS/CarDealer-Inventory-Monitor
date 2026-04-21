@@ -6,7 +6,7 @@ This project is an automated script which pulls the website from the internet an
 
 This is the data that we can grab and the script is trying grab from the target website! (As you can see in the screenshot) 
 
-<img width="753" height="1047" alt="IMG_0695" src="https://github.com/user-attachments/assets/2987f1b9-2004-406d-8413-c9911771f6ed" />
+<img width="251" height="349" alt="IMG_0695" src="https://github.com/user-attachments/assets/2987f1b9-2004-406d-8413-c9911771f6ed" />
 
 ### Demo
 
@@ -47,10 +47,9 @@ I am interested in the craft of web scraping and I am doing it simply for learni
 
 ### Safety Guidelines
 
+<img width="321" height="106" alt="Screenshot from 2026-04-21 19-46-45" src="https://github.com/user-attachments/assets/e5fb7ae5-7b08-446d-b240-fe9aac626d70" />
+
 This script is following the website rules and regulations provided by the website owner at robots.txt file - specifically made for bots and this script is only accessing the public information available on this website!
-
-<img width="965" height="320" alt="Screenshot from 2026-04-21 19-46-45" src="https://github.com/user-attachments/assets/e5fb7ae5-7b08-446d-b240-fe9aac626d70" />
-
 
    > **Guidelines were last checked on the date of April 21, 2026** 
 
