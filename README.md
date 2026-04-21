@@ -6,10 +6,10 @@ This project is an automated script which pulls the website from the internet an
 
 This is the screenshot from the website and this is how individual car is listed on the website that is currently available in the dealership inventory.
 
-The script is currently trying to grab the individual details about every single car currently available at the dealership website.
-
 <br>
 <img width="251" height="349" alt="IMG_0695" src="https://github.com/user-attachments/assets/2987f1b9-2004-406d-8413-c9911771f6ed" />
+<br>
+The script is currently trying to grab the individual details about every single car currently available at the dealership website.
 
 ### Demo
 
