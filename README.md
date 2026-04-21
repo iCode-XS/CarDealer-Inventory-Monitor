@@ -12,8 +12,10 @@ The script is currently trying to grab the individual details about every single
 
 Website link: [Click here](https://driveinstyle.com.au/stock-list)
 
-'''diff
-- WARNING: I advise you not to click at the link! If you run this link even once at the browser, you won't be able to use the script!
+<span style="color:red">
+WARNING:
+</span>
+I advise you not to click at the link! If you click on this link even once with your browser, you won't be able to use the script!
 
 ### Demo
 
