@@ -12,9 +12,7 @@ The script is currently trying to grab the individual details about every single
 
 Website link: [Click here](https://driveinstyle.com.au/stock-list)
 
-<span style="color:red">
-WARNING:
-</span>
+> WARNING:
 I advise you not to click at the link! If you click on this link even once with your browser, you won't be able to use the script!
 
 ### Demo
