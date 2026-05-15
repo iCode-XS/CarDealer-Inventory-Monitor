@@ -125,3 +125,5 @@ table.to_csv('Inventory_listings.csv', index=False) # Creating a .csv file
 
 print('Data has been saved to an Excel file!')
 print('Data has been saved to a .csv file!')
+
+session.close()    # This closes the session that we started above 
